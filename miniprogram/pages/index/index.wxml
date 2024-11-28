@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <picker mode="date" value="{{lastDay}}" start="{{datePickerStartDay}}" bindchange="handleDateChange">
+      <view class="picker">
+        退休日期: 
+        <block wx:if="{{lastDay}}">
+          {{lastDay}}
+        </block>
+        <block wx:else>
+          请选择
+        </block>
+      </view>
+    </picker>
+  </view>
+</scroll-view>
